@@ -1,2 +1,2 @@
 default["apache"]["greeting"] = "Dublin, CA"
-default["apache"]["port"] = 81
+default["apache"]["port"] = 80

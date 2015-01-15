@@ -28,10 +28,15 @@ template '/var/www/html/index.html' do
 	group "root"
 end
 
+neighbors = search(:node, "chef_environment:#{node.environment()}")
+
 template '/etc/httpd/conf/httpd.conf' do
 	source "httpd.conf.erb"
 	mode "0644"
 	owner "root"
 	group "root"
 	notifies :restart, "service[httpd]"
+	variables(
+		:neighbors => neighbors
+	)
 end

@@ -4,5 +4,8 @@
   "run_list" : [
     "recipe[motd]",
     "recipe[ntp]"
-  ]
+  ],
+  "default_attributes" : {
+    "company_name" : "SAP Americas"
+  }
 }

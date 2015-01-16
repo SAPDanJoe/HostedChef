@@ -13,4 +13,4 @@ search("users", "*:*").each do |user_data|
   end
 end
 
-include_repice["groups"]
+include_recipe "user::groups"
